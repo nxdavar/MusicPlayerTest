@@ -27,7 +27,6 @@ const App = () => {
   const [loopMode, setLoopMode] = useState(false);
 
 
-
   /**
    * Designed app such that user cannot activate 
    * both shuffle and loop mode, disable other 
@@ -37,6 +36,8 @@ const App = () => {
     if(newVal && loopMode) {
       setLoopMode(false);
     }
+    setPrevIndices([]);
+    setPrevIndexSet(new Set());
     setShuffle(newVal);
   }
 
@@ -60,6 +61,9 @@ const App = () => {
     setPrevIndexSet(new Set());
   }
 
+  useEffect(() => {
+  }, [prevIndexSet.size])
+
  /**
   * navigates to the next song on the basis of 
   * how many songs iterated through and shuffle
@@ -67,7 +71,7 @@ const App = () => {
   */
   function navNextSong() {
     // go back to first song in the playlist and set to not playing
-    if(!loopMode && prevIndexSet.size === sampleData.length - 1) {
+    if(!loopMode && (prevIndexSet.size === sampleData.length - 1 || prevIndexSet.size === sampleData.length)) {
       setPrevIndexSet();
       resetToFirst();
       return;
@@ -104,18 +108,20 @@ const App = () => {
    * prev lists
    */
   function navPrevSong() {
-    if(prevIndices.length === 0) {
+    if(!loopMode && prevIndices.length === 0) {
       resetToFirst();
     }
-    let newIndex = prevIndices.pop();
-    let newSong = sampleData[newIndex];
+    else {
+      let newIndex = prevIndices.pop();
+      let newSong = sampleData[newIndex];
      
-
     // delete from prev data structs: 
     prevIndexSet.delete(newIndex);
 
     setCurrIndex(newIndex);
     setCurrSong(newSong);
+    }
+    
   }
  
  

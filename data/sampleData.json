@@ -2,61 +2,51 @@
     {
         "title": "River Flows In You",
         "artist": "Yiruma",
-        "lengthInSec": 188, 
-        "image": ""
+        "lengthInSec": 188
     },
     {
         "title": "Start a Riot",
         "artist": "Banners",
-        "lengthInSec": 215,
-        "image": ""
+        "lengthInSec": 215
     },
     {
         "title": "Imagine -- Remastered",
         "artist": "John Legend",
-        "lengthInSec": 187,
-        "image": ""
+        "lengthInSec": 187
     },
     {
         "title": "Hall of Fame",
         "artist": "The Script, will.i.am",
-        "lengthInSec": 202,
-        "image": ""
+        "lengthInSec": 202
     },
     {
         "title": "Africa",
         "artist": "TOTO",
-        "lengthInSec": 295,
-        "image": ""
+        "lengthInSec": 295
     },
     {
         "title": "Breakeven",
         "artist": "The Script",
-        "lengthInSec": 261,
-        "image": ""
+        "lengthInSec": 261
     },
     {
         "title": "Hey, Soul Sister",
         "artist": "Train",
-        "lengthInSec": 216,
-        "image": ""
+        "lengthInSec": 216
     },
     {
         "title": "Pompeii",
         "artist": "Bastille",
-        "lengthInSec": 214,
-        "image": ""
+        "lengthInSec": 214
     },
     {
         "title": "I Ain't Worried",
         "artist": "One Republic",
-        "lengthInSec": 148,
-        "image": ""
+        "lengthInSec": 148
     },
     {
         "title": "Superposition",
         "artist": "Young The Giant",
-        "lengthInSec": 231,
-        "image": ""
+        "lengthInSec": 231
     }
 ]
