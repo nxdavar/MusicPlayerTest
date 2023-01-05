@@ -1,5 +1,8 @@
 # MusicPlayerTest
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/HkC6rb0eNNQ)
+360P Video Demo Link: https://youtu.be/HkC6rb0eNNQ
+
+
+720P Video Demo Link (Should be up in the next few hours)
 
 
