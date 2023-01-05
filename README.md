@@ -1,8 +1,4 @@
 # MusicPlayerTest
 
-360P Video Demo Link: https://youtu.be/HkC6rb0eNNQ
-
-
-720P Video Demo Link (Should be up in the next few hours)
-
+720P Video Demo Link: https://drive.google.com/file/d/1lUErcORnnQj-FsYWbJ2yB6FmjssMgqbi/view?usp=sharing
 
