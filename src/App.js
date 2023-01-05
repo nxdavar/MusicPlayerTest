@@ -1,5 +1,5 @@
 // external exports: 
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   SafeAreaView,
   Text,
@@ -67,30 +67,35 @@ const App = () => {
   */
   function navNextSong() {
     // go back to first song in the playlist and set to not playing
-    if(!loopMode && prevIndexSet.size === sampleData.length) {
+    if(!loopMode && prevIndexSet.size === sampleData.length - 1) {
+      setPrevIndexSet();
       resetToFirst();
-    }
-    // add current song to prev lists: 
-    setPrevIndices(prevIndices => [...prevIndices, currIndex]);
-    let currSet = new Set(prevIndexSet);
-    currSet.add(currIndex);
-
-    if(shuffle) {
-      let randomIndex = Math.floor(Math.random() * sampleData.length);
-      // Ensure that the same song isn't played twice even if it's 'random'
-      while (randomIndex === currIndex) {
-        randomIndex = Math.floor(Math.random() * sampleData.length);
-      }
-      setCurrIndex(randomIndex);
-      setCurrSong(sampleData[randomIndex]);
+      return;
     }
     else {
-      let nextIndex = (currIndex + 1) % sampleData.length;
-      setCurrIndex(nextIndex);
-      setCurrSong(sampleData[nextIndex]); 
+      // add current song to prev lists: 
+      setPrevIndices(prevIndices => [...prevIndices, currIndex]);
+      let currSet = new Set(prevIndexSet);
+      currSet.add(currIndex);
+      setPrevIndexSet(currSet);
+
+      if(shuffle) {
+        let randomIndex = Math.floor(Math.random() * sampleData.length);
+        // Ensure that the same song isn't played twice even if it's 'random'
+        while (randomIndex === currIndex) {
+          randomIndex = Math.floor(Math.random() * sampleData.length);
+        }
+        setCurrIndex(randomIndex);
+        setCurrSong(sampleData[randomIndex]);
+      }
+      else {
+        let nextIndex = (currIndex + 1) % sampleData.length;
+        setCurrIndex(nextIndex);
+        setCurrSong(sampleData[nextIndex]); 
+      }
+      // automatically start playing this song
+      setPlaying(true);
     }
-    // automatically start playing this song
-    setPlaying(true);
   }
 
   /**
