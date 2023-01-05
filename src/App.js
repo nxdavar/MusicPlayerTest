@@ -121,6 +121,8 @@ const App = () => {
         <Image source={{uri: `https://picsum.photos/300/?random&name=${currSong.title}${currSong.artist}`}}
         style={styles.albumImageStyle} />
       </View>
+      {/** Spacer for a cleanrer look and feel */}
+      <View style={{flex: 2}}/>
        {/** Album Text */}
       <View style={styles.albumTextContainer}>
         <Text style={[styles.albumTitle, styles.primaryAccent]}>
@@ -136,6 +138,8 @@ const App = () => {
       navPrevSong={navPrevSong}/>
       <ProgressBar songLength={currSong.lengthInSec} playing={playing}
       navNextSong={navNextSong}/>
+        {/** Spacer for a cleanrer look and feel */}
+        <View style={{flex: 0.3}}/>
     </SafeAreaView>
   );
 };
