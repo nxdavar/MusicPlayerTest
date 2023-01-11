@@ -1,4 +1,4 @@
 # MusicPlayerTest
 
-720P Video Demo Link: https://www.youtube.com/watch?v=oyAfQAPHA2g
+A React Native application which was built to showcase what the UI and some functionalities might look like for a music player application
 
